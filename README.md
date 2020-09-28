@@ -1,2 +1,8 @@
 # dpl_B_estanis
-Repositorio de la clase de dpl con alejandro
+**Repositorio para la clase DPL
+
+[Web del Centro](https://blog.iespuertodelacruz.es/)
+
+![Logo 
+del 
+instituto](https://blog.iespuertodelacruz.es/wp-content/header/Logotipo_IES.png)
