@@ -16,7 +16,15 @@ la práctica.
 > de esta manera creamos el nuevo repositorio. Posteriormente crearemos el archivo README.md y LICENSE. Esto lo realizamos entrando al directorio del respositorio mediante cd dpl_B_estanis y luego touch README.md, etc. Adicionalmente, y usando un procedimiento similar, creamos dos directorios, practicas y tareas, mediante el comando mkdir tareas y mkdir practicas.
 - git clone [https://github.com/dawestanis/dpl_B_estanis.git] 
 > de esta manera procedemos a clonar nuestro repositorio.
-- cd 
+- touch tarea1.md 
+> creamos el archivo tarea1.md 
+- git add . 
+> añadimos todos los cambios que hemos hecho
+- git commit -m "[comentario]"
+> realizamos el primer commit 
+- git push
+> realizamos el primer push, de esta manera enviamos todos los cambios al repositorio.
+ 
 
 
 
