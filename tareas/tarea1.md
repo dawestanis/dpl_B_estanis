@@ -50,11 +50,11 @@ la práctica.
 ![seguir a juan](seguir_juan.jpg)
 ![poner estrella a juan](star_juan.jpg)
 - - -
-| **NOMBRE** | **GITHUB** |
-| - - - | - - - |
+| **NOMBRE** |                    **GITHUB**                     |
+| - - - - - -|:- - - - - - - - - - - - - - - - - - - - - - - - -:|
 | Juan Daniel|[github de Juan](https://github.com/zclut/dpl_juan)|
-| Manu | [github de Manu](https://github.com/klasinky)|
-| Romen | [github de Romen](https://github.com/romentoss/dpl_B_romen)|
+|    Manu    | [github de Manu](https://github.com/klasinky)|
+|   Romen    | [github de Romen](https://github.com/romentoss/dpl_B_romen)|
 
 > Añadimos a un colaborador.
 ![Colaborador Alejandro](commit_inicial.jpg)
