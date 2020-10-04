@@ -14,7 +14,8 @@ la práctica.
 > con este registramos el correo electronico.
 - git init dpl_B_estanis 
 > de esta manera creamos el nuevo repositorio. Posteriormente crearemos el archivo README.md y LICENSE. Esto lo realizamos entrando al directorio del respositorio mediante cd dpl_B_estanis y luego touch README.md, etc. Adicionalmente, y usando un procedimiento similar, creamos dos directorios, practicas y tareas, mediante el comando mkdir tareas y mkdir practicas.
-- git clone [https://github.com/dawestanis/dpl_B_estanis.git] > de esta manera procedemos a clonar nuestro repositorio.
+- git clone [https://github.com/dawestanis/dpl_B_estanis.git] 
+> de esta manera procedemos a clonar nuestro repositorio.
 - cd 
 
 
