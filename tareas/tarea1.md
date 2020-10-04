@@ -24,7 +24,13 @@ la práctica.
 > realizamos el primer commit 
 - git push
 > realizamos el primer push, de esta manera enviamos todos los cambios al repositorio.
- 
-
-
-
+- mkdir privada
+> creamos la carpeta llamada privada
+- touch privado.txt
+> creamos el archivo privado.txt
+- nano .gitignore
+> creamos el documento .gitignore y dentro insertamos privado.txt y la carpeta privada.
+- touch 1.txt
+> creamos el archivo 1.txt
+> Le hacemos un add . luego un commit y luego un push para enviar todos los cambios al repositorio.
+![1.txt](add_commit_push_1txt.jpg)
