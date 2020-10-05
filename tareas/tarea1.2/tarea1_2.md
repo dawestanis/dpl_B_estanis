@@ -46,6 +46,8 @@ Se deben incluir todos los comandos que se usen durante el ejercicio, las explic
 ### ARREGLAR  CONFLICTO (1 PUNTO)
 - Arreglar el conflicto anterior y hacer un commit. Explicar como lo has arreglado incluyendo capturas de pantalla.
 
+> Para arreglar el conflicto simplemente entramos al documento, borramos lo que se nos ha añadido, dejamos solo el Hola y el Adios, guardamos, salimos del documento y realizamos un add . y un commit.
+
 ### BORRAR RAMA (1 PUNTO)
 - Crear un tag v0.2
 - Borrar la rama v0.2
