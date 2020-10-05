@@ -13,12 +13,15 @@ Se deben incluir todos los comandos que se usen durante el ejercicio, las explic
 ![Rama v0.2](crear_branch_v02.jpg)
 
 ### AÑADIR  EL FICHERO 2.txt  (1 PUNTO)
+- touch 2.txt
 > Añadir un fichero 2.txt en la rama v0.2
+
+![2.txt](crear_2txt.jpg)
 
 ### CREAR UNA RAMA REMOTA v0.2 (1 PUNTO)
 > Subir los cambios al repositorio remoto.
 
-![2.txt](crear_2txt.jpg)
+![Creamos rama v0.2](crear_branch_v02.jpg)
 
 ### MERGE DIRECTO (1 PUNTO)
 - Posicionarse en la rama master.
