@@ -1,6 +1,9 @@
 ## Instalación del servidor web NGINX en Ubuntu Server
 - Instalar Nginx
 > Para instalar nginx vamos a usar el comando sudo `sudo apt install nginx`
+
+![instalando_nginx](instalando_nginx.jpg)
+
 > Comprobamos que se ha instalado
 
 ![instalado nginx](comprobar_instalacion_nginx.jpg)
