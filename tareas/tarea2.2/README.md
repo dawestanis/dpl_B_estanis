@@ -1,25 +1,31 @@
-## Tarea 2.1
+## Instalación del servidor web Apache en Ubuntu Server
+- Instalar Apache
+> Para instalar apache usaré el siguiente comando: `sudo apt install apache2`
 
-- Configuracíon del adaptador de red en VirtualBox
-> Configuramos la red de ambas maquinas entrando a configuración desde el panel del virtualbox
+![instalar_apache2](instalar_apache2.jpg)
 
-|[DisplayVB](config_red_vb.jpg)
+> Vamos a comprobar que está instalado correctamente.
 
-> Entramos en DesarrolloW723 para configuar la red.
+![comprobación de instalación de apache2](comprobar_instalación_apache2.jpg)
 
-![ipwin](Screenshot_1.jpg)
+- Comfigurar el firewall.
+> Se recomienda habilitar el perfil más restrictivo, que de todos modos permitirá el tráfico que configuró. Debido a que en esta práctica aún no configuramos SSL para nuestro servidor, solo deberemos permitir el tráfico en el puerto 80:
 
-- Configuración del adaptador de red en Ubuntu Server.
-> Iniciamos la maquina virtual y vamos al directorio /etc/netplan/ y editamos el fichero 00-installer-config.yaml
+![configuración del firewall](configurando_el_firewall_apache.jpg)
 
-![sl](configuración_plinux.jpg)
+> Verificamos el cambio con el siguiente comando.
 
-> Ahora vamos a reiniciar configuración.
+![verificar_apache2](verificar_apache2.jpg)
 
-![reinicio de configuración](Screenshot_2.jpg)
+> Como no está activo tenemos que activar el firewall.
 
-- Comprobación de la configuración y de funcionamiento.
-> Ping desde Windows
+![activar firewall](firewall2.jpg)
 
-![Ping win-linx](enviando_ping_de_windows_a_linux.jpg)
+- Comprobar el estado del servidor web.
+> Tras la instalación el Ubuntu inicia Apache. El servidor debe estar activo. Vamos a comprobarlo con el siguiente comando:
 
+![comprobación del servidor](status_apache.jpg)
+
+> Ahora tambien vamos a comprobarlo en un navegador.
+
+![comprobar en navegador](apache2_rulando.jpg)
