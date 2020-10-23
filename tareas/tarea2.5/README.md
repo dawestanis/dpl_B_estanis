@@ -63,12 +63,13 @@ Explica a que significa esto.
 
 Prueba el acceso a la base de datos con la nueva contraseña.
 
+![](11.jpg)
+
 Inserta  comando utilizado y captura de pantalla
 Crea un nuevo usuario en la base de datos llamado developer con la contraseña 5t6y7u8i.
 
-Inserta los comandos utilizados y las capturas de pantalla correspondientes.
+![](12.jpg)
 
-Así como capturas de pantalla del proceso de login a la base de datos con el nuevo usuario creado.
 
 ### 4.Instalación de la última versión de PHP.
 Vamos a escribir el siguiente comando para instalar PHP y algunos módulos PHP comunes:
