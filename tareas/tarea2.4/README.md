@@ -87,3 +87,5 @@ Dentro del bloque Context encontraremos una directiva Valve:
 Debemos desactivar esta directiva encerrándola en un bloque de comentarios XML:
 
 ![](12.jpg)
+
+![](13.jpg)
