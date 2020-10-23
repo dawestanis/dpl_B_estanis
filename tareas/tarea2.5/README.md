@@ -111,6 +111,7 @@ Una vez guardado el archivo, ahora en la barra de direcciones del navegador tend
 
 Inserta captura de pantalla del resultado
 
+![](22.jpg)
 
 
 ### 4.1 Ejecutando código PHP en Apache.
@@ -119,22 +120,32 @@ Tenemos dos formas de ejecutar código PHP con el servidor web Apache. Con el m�
 
 `sudo a2dismod php7.4`
 
+![](20.jpg)
+
 Posteriormente instalamos PHP-FPM:
 
 `sudo apt install php7.4-fpm`
+
+![](21.jpg)
 
 Continuamos habilitando proxy_fcgi y el módulo setenvif:
 
 `sudo a2enmod proxy_fcgi setenvif`
 
+![](23.jpg)
+
 El siguiente paso será habilitar el archivo de configuración /etc/apache2/conf-available/php7.4-fpm.conf:
 
 `sudo a2enconf php7.4-fpm`
+
+![](24.jpg)
 
 Después debemos reiniciar Apache:
 
 `sudo systemctl restart apache2`
 
+![](26.jpg)
+
 Ahora, si actualizas la página info.php en el navegador, encontrarás que la API del servidor ha cambiado de Apache 2.0 Handler a FPM/FastCGI, lo que significa que el servidor web Apache pasará las solicitudes de PHP a PHP-FPM.
 
-Inserta   captura de pantalla
+![](27.jpg)
