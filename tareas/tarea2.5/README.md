@@ -24,7 +24,7 @@ Después de que se instale, el servidor MariaDB debe ejecutarse automáticamente
 
 Inserta el comando utilizado para comprobar el estado del servidor y una captura de pantalla
 
-
+`sudo systemctl status`
 
 Para permitir que MariaDB se inicie automáticamente en el momento del arranque, debemos ejecutar:
 
@@ -34,19 +34,29 @@ Para permitir que MariaDB se inicie automáticamente en el momento del arranque,
 
 Verifica la versión del servidor mariadb instalado:
 
-Inserta el comando utilizado para comprobar la versión del
+![](5.jpg)
 
-servidor y una captura de pantalla
 
 Ejecutamos un script de seguridad posterior a la instalación, por medio del siguiente comando:
 
-sudo mysql_secure_installation
+`sudo mysql_secure_installation`
 
 Cuando nos solicite que escribamos la contraseña root de MariaDB, pulsa Introya que la contraseña root aún no está configurada. Después escribe tu contraseña de rootpara el servidor MariaDB.
 
+![](6.jpg)
+
 A continuación podemos pulsar Intro para responder todas las preguntas restantes. Esto eliminará el usuario anónimo, deshabilitará el inicio de sesión raíz remoto y eliminará la base de datos de prueba.
 
+![](7.jpg)
+
 Inserta capturas de pantalla de todo el proceso
+
+![](8.jpg)
+
+![](9.jpg)
+
+![](10.jpg)
+
 Por defecto, el paquete MariaDB en Ubuntu usa unix_socket para autenticar el inicio de sesión del usuario.
 
 Explica a que significa esto.
