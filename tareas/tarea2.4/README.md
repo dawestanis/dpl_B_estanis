@@ -68,7 +68,7 @@ Antes del cierre del bloque tomcat-users añadiremos una definición de usuario 
 
 Guardamos los cambios y cerramos el archivo.
 
-![/usr/share/tomcat9-admin/host-manager/META-INF/context.xml](11.jpg)
+
 
 ### 3.3 Acceso remoto a las aplicaciones.
 Algunas aplicaciones, de nuevo entre ellas las aplicaciones administrativas, restringen en su configuración personal el acceso desde red, por lo que debemos editar su archivo de configuración `context.xml`. Son configuraciones de las aplicaciones en particular, no de Tomcat 9, y algunas aplicaciones tendrán esta característica y otras no.
@@ -86,6 +86,97 @@ Dentro del bloque Context encontraremos una directiva Valve:
 `
 Debemos desactivar esta directiva encerrándola en un bloque de comentarios XML:
 
+![/usr/share/tomcat9-admin/host-manager/META-INF/context.xml](11.jpg)
+
+
+
+Comprobamos que funciona. Vamos a la maquina de Windows y ponemos la ip con :8080
+
+
+
+
+
+### 3.4 Aplicando los cambios a la configuración.
+Después de hacer estos cambios, habrá que reiniciar el servicio Tomcat 9 para aplicarlos:
+sudo systemctl restart tomcat9
+
 ![](12.jpg)
 
-![](13.jpg)
+
+### 4. Acceder a Tomcat 9.
+Vamos a acceder a Tomcat 9 en Ubuntu 20.04 LTS, desde un navegador, para lo que indicaremos la dirección IP o nombre de la máquina y el puerto de conexión, que en la configuración estándar es el 8080.
+
+http://ip_del_server:8080
+
+Obteniendo como resultado la página de inicio de Tomcat 9:
+
+
+![](14.jpg)
+
+
+
+Hay varios enlaces a la aplicación de documentación, a la aplicación de ejemplos y a las aplicaciones administrativas.
+
+### 5. Aplicación Manager.
+Si intentamos acceder al Gestor de Aplicaiones Web, aplicación /manager/html, o http://ip_del_server:8080/manager/html en este ejemplo, sí que se nos solicita autenticación:
+
+![](15.jpg)
+
+
+Introduciremos el nombre y la contraseña del usuario que creamos con el rol manager-gui para poder acceder, y se mostrará el Gestor de Aplicaciones Web de Tomcat, donde podrás desplegar, replegar, iniciar o detener aplicaciones web servidas desde Tomcat 9:
+
+
+![](16.jpg)
+
+### 6. Aplicación Host Manager.
+Desde la página inicial de Tomcat 9 encontraremos también el acceso al Gestor de Máquina Virtual de Tomcat en la ruta /host-manager, o http://ip_del_server:8080/host-manager/html en este ejemplo. Tras autenticarnos accederemos a la aplicación:
+
+
+
+### 7. Desplegando aplicaciones sobre Tomcat 9 en Ubuntu Server.
+Si dispones de un arhivo .war  (descargar el archivo adjunto a la tarea ) correspondiente a una aplicación que quieras desplegar en Tomcat 9 sobre Ubuntu, entra en el Gestor de Aplicaciones Web de Tomcat y desplázate hasta la sección Desplegar, concretamente al recuadro Archivo WAR a desplegar. Utilizando el botón Seleccionar archivo podrás buscar el archivo .war en el sistema de archivos.
+
+![](17.jpg)
+
+![](18.jpg)
+
+Cuando el archivo esté seleccionado, pulsa el botón Desplegar. La aplicación será desplegada y se recargará el Gestor de Aplicaciones, la nueva aplicación aparecerá en la lista de aplicaciones, junto a sus controles de gestión:
+
+![](19.jpg)
+Para probar la nueva aplicación bastará con seguir el enlace que aparece en la misma lista de aplicaciones, que será el enlace que facilitaremos a nuestros usuarios:
+
+![](20.jpg)
+
+8. Cambiando el tamaño máximo admitido de los archivos .war
+
+Es posible que para alguna aplicación en concreto no baste con el valor por defecto del tamaño máximo de archivos .war. Podremos aumentar este tamaño editando el archivo de configuración web.xml del Gestor de Aplicaciones Web de Tomcat:
+
+sudo nano /usr/share/tomcat9-admin/manager/WEB-INF/web.xml
+
+Buscamos el bloque multipart-config:
+
+`...
+    <multipart-config>
+      <!-- 50MB max -->
+      <max-file-size>52428800</max-file-size>
+      <max-request-size>52428800</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+...
+´
+
+![](21.jpg)
+
+Podemos comprobar que el tamaño máximo por defecto es de 50 MB estando las cantidades están expresadas en bytes. Por ejemplo, un nuevo tamaño máximo de 100 MB quedaría así:
+
+`...
+    <multipart-config>
+      <!-- 100MB max -->
+      <max-file-size>104857600</max-file-size>
+      <max-request-size>104857600</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+...
+´
+
+![](22.jpg)
