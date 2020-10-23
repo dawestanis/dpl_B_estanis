@@ -74,25 +74,38 @@ Crea un nuevo usuario en la base de datos llamado developer con la contraseña 5
 ### 4.Instalación de la última versión de PHP.
 Vamos a escribir el siguiente comando para instalar PHP y algunos módulos PHP comunes:
 
-sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline
+`sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline`
+
+![](14.jpg)
+
+![](13.jpg)
 
 Ahora tendremos que activar el módulo Apache php8 y reiniciar el servidor web Apache.
 
-sudo a2enmod php7.4
+`sudo a2enmod php7.4`
 
-sudo systemctl restart apache2
+![](15.jpg)
+
+`sudo systemctl restart apache2`
+
+![](16.jpg)
 
 Verificamos la versión de PHP instalada mediante el comando:
 
-php --version
+`php --version`
+
+![](17.jpg)
 
 Para probar los scripts PHP con el servidor Apache, necesitamos crear un archivo info.php en el directorio raíz:
 
-sudo vim /var/www/html/info.php
+`sudo vim /var/www/html/info.php`
+
 
 Dentro del archivo vamos a pegar el siguiente código PHP:
 
-<?php phpinfo(); ?>
+`<?php phpinfo(); ?>`
+
+![](18.jpg)
 
 Una vez guardado el archivo, ahora en la barra de direcciones del navegador tendremos que escribir dirección-ip/info.php.
 
@@ -104,23 +117,23 @@ Inserta captura de pantalla del resultado
 
 Tenemos dos formas de ejecutar código PHP con el servidor web Apache. Con el módulo PHP Apache y con PHP-FPM.7En los pasos anteriores, el módulo Apache PHP7.4 se usa para manejar el código PHP. Esto generalmente está bien, pero en algunos casos debemos ejecutar código PHP con PHP-FPM. Para hacerlo, tendremos que deshabilitar el módulo Apache PHP8:
 
-sudo a2dismod php7.4
+`sudo a2dismod php7.4`
 
 Posteriormente instalamos PHP-FPM:
 
-sudo apt install php7.4-fpm
+`sudo apt install php7.4-fpm`
 
 Continuamos habilitando proxy_fcgi y el módulo setenvif:
 
-sudo a2enmod proxy_fcgi setenvif
+`sudo a2enmod proxy_fcgi setenvif`
 
 El siguiente paso será habilitar el archivo de configuración /etc/apache2/conf-available/php7.4-fpm.conf:
 
-sudo a2enconf php7.4-fpm
+`sudo a2enconf php7.4-fpm`
 
 Después debemos reiniciar Apache:
 
-sudo systemctl restart apache2
+`sudo systemctl restart apache2`
 
 Ahora, si actualizas la página info.php en el navegador, encontrarás que la API del servidor ha cambiado de Apache 2.0 Handler a FPM/FastCGI, lo que significa que el servidor web Apache pasará las solicitudes de PHP a PHP-FPM.
 
