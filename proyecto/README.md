@@ -135,13 +135,15 @@ Ahora realizaremos varias pruebas de configuración sobre el servidor web Apache
 
 - Configura el servidor para que cuando retorne el código de error 404 (página no encontrada) envíe el texto Página no encontrada en el servidor.
 
-    ![](20.jpg)
+    
 - Reinicia el servidor. Desde el cliente_nombre establece una conexión a http://www.fpdaw.org/noexiste.html y muestra qué te aparece en la pantalla.
 
     ![](19.jpg)
 #### 6. Redirecciones.
 
 - Configura el servidor para que al entrar a http://www.fpdaw.org/ciclos haga una redirección automática hacia http://www.fpdaw.org/dam mostrando la página web correspondiente a DAM.
+    
+    ![](20.jpg)
 
     ![](21.jpg)
 
